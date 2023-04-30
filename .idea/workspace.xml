@@ -5,24 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b6be968-59ab-415c-8977-55d3617d8ea7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/InfiniteRPlacePlugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/api/data/Grid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/api/database/MySQLDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/api/database/SQLCredentials.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/api/pubsub/IPacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/api/pubsub/PubSubListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/api/pubsub/RedisDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/listener/BlockPlaceListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/listener/PlayerJoinListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/api/pubsub/PixelUpdate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/api/pubsub/RedisCredentials.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/api/pubsub/RedisPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/InfiniteRPlacePlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/InfiniteRPlacePlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/api/data/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/api/data/Grid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/api/database/MySQLDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/api/database/MySQLDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/api/pubsub/IPacket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/api/pubsub/PubSubListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/api/pubsub/PubSubListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/api/pubsub/RedisDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/langomatisch/infiniterplace/api/pubsub/RedisDatabase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +28,7 @@
       <list>
         <option value="new-sketch" />
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -56,29 +51,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="de.langomatisch.infiniterplace.api.database" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="GenerateColorMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="de.langomatisch.infiniterplace.GenerateColorMap" />
+      <module name="infinite-r-place" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.langomatisch.infiniterplace.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GenerateColorMap" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -89,7 +104,8 @@
       <option name="presentableId" value="Default" />
       <updated>1682763576697</updated>
       <workItem from="1682763577076" duration="409000" />
-      <workItem from="1682769315845" duration="10689000" />
+      <workItem from="1682769315845" duration="11567000" />
+      <workItem from="1682846927622" duration="7748000" />
     </task>
     <servers />
   </component>

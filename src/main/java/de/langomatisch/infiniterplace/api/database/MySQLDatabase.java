@@ -2,6 +2,7 @@ package de.langomatisch.infiniterplace.api.database;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import de.langomatisch.infiniterplace.InfiniteRPlacePlugin;
 import de.langomatisch.infiniterplace.api.data.Grid;
 import org.bukkit.Material;
 
@@ -15,7 +16,6 @@ public class MySQLDatabase {
 
     private final static int MAX_SIZE = 128;
 
-    private final static Material[] MATERIALS = Material.values();
 
     private final HikariDataSource pool;
 
@@ -30,6 +30,8 @@ public class MySQLDatabase {
         System.out.println("connected to database");
     }
 
+    // TODO: create table if not exists
+    
     public void closeConnection() {
         pool.close();
     }
@@ -44,7 +46,7 @@ public class MySQLDatabase {
         while (resultSet.next()) {
             int x = resultSet.getInt("x");
             int y = resultSet.getInt("y");
-            Material material = MATERIALS[resultSet.getInt("material")];
+            Material material = InfiniteRPlacePlugin.MATERIALS[resultSet.getInt("material")];
             grid.getGrid()[x + 64][y + 64] = material;
             System.out.println("loaded material " + material + " at " + x + " " + y + "");
         }

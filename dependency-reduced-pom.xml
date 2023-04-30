@@ -19,6 +19,7 @@
               <artifactSet>
                 <includes>
                   <include>com.zaxxer:HikariCP</include>
+                  <include>redis.clients:jedis</include>
                 </includes>
               </artifactSet>
             </configuration>
@@ -54,6 +55,12 @@
       <groupId>org.spigotmc</groupId>
       <artifactId>plugin-annotations</artifactId>
       <version>1.2.3-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.spigotmc</groupId>
+      <artifactId>spigot</artifactId>
+      <version>1.19.2-R0.1-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
   </dependencies>

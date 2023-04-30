@@ -6,6 +6,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.*;
 import org.bukkit.event.entity.EntityDropItemEvent;
+import org.bukkit.event.entity.EntityExplodeEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.inventory.ItemStack;
 
@@ -65,6 +66,17 @@ public class BlockPlaceListener implements Listener {
 
     @EventHandler
     public void onStuff(BlockBurnEvent event) {
+        event.setCancelled(true);
+    }
+
+    @EventHandler
+    public void onStuff(BlockExplodeEvent event) {
+        event.setCancelled(true);
+    }
+
+
+    @EventHandler
+    public void onStuff(EntityExplodeEvent event) {
         event.setCancelled(true);
     }
 

@@ -1,8 +1,7 @@
 package de.langomatisch.infiniterplace.api.pubsub;
 
-public interface PubSubListener<T extends IPacket> {
+public interface PubSubListener<T> {
 
-    String channel();
 
     void onMessage(String channel, T message);
 

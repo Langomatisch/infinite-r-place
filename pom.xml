@@ -46,6 +46,16 @@
             <artifactId>HikariCP</artifactId>
             <version>5.0.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot</artifactId>
+            <version>1.19.2-R0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>4.3.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -64,6 +74,7 @@
                             <artifactSet>
                                 <includes>
                                     <include>com.zaxxer:HikariCP</include>
+                                    <include>redis.clients:jedis</include>
                                 </includes>
                             </artifactSet>
                         </configuration>
